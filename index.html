@@ -27,20 +27,16 @@
     --amber:#EF9F27; --amber-bg:#412402; --amber-text:#FAC775;
     --red:#E24B4A; --red-bg:#501313; --red-text:#F7C1C1;
   }}
-
   body { font-family:var(--font); background:var(--bg); color:var(--text); font-size:14px; line-height:1.5; }
   .page { max-width:1100px; margin:0 auto; padding:24px 20px; }
-
   #csvIn { position:absolute; width:1px; height:1px; opacity:0; overflow:hidden; }
   .ul { display:inline-block; padding:7px 14px; font-size:13px; font-family:var(--font); background:var(--blue); color:#E6F1FB; border:none; border-radius:var(--r); cursor:pointer; user-select:none; }
   .ul:hover { opacity:.88; }
-
   .topbar { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; gap:12px; flex-wrap:wrap; }
   .topbar-left { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
   .topbar h1 { font-size:16px; font-weight:500; }
   .date-badge { font-size:11px; color:var(--text3); background:var(--bg2); padding:3px 10px; border-radius:100px; white-space:nowrap; }
   .topbar-right { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
-
   .btn { padding:7px 14px; font-size:13px; border:0.5px solid var(--border2); border-radius:var(--r); background:transparent; color:var(--text); cursor:pointer; font-family:var(--font); transition:background .12s; white-space:nowrap; }
   .btn:hover { background:var(--bg2); }
   .btn-sm { padding:5px 10px; font-size:12px; }
@@ -48,34 +44,26 @@
   .btn-primary:hover { opacity:.88; background:var(--blue); }
   .btn-danger { color:var(--red-text); border-color:rgba(226,75,74,.35); }
   .btn-danger:hover { background:var(--red-bg); }
-
   .toast { position:fixed; top:20px; right:20px; z-index:500; padding:12px 18px; border-radius:var(--r); font-size:13px; font-weight:500; opacity:0; transform:translateY(-8px); transition:all .25s; pointer-events:none; max-width:360px; }
   .toast.show { opacity:1; transform:translateY(0); }
   .toast-ok  { background:var(--green-bg); color:var(--green-text); border:0.5px solid rgba(29,158,117,.3); }
   .toast-err { background:var(--red-bg);   color:var(--red-text);   border:0.5px solid rgba(226,75,74,.3); }
-
   .alert-banner { background:var(--red-bg); border:0.5px solid rgba(226,75,74,.4); border-radius:var(--r); padding:12px 16px; margin-bottom:20px; font-size:13px; color:var(--red-text); display:none; line-height:1.9; }
   .alert-banner.show { display:block; }
-
   .drop-label { display:block; border:1.5px dashed var(--border2); border-radius:var(--rl); padding:40px 24px; text-align:center; cursor:pointer; margin-bottom:24px; transition:background .15s; }
   .drop-label:hover, .drop-label.drag { background:var(--bg2); }
   .drop-label .uico { font-size:36px; display:block; margin-bottom:10px; }
   .drop-label strong { font-size:15px; font-weight:500; display:block; margin-bottom:8px; }
   .drop-label p { font-size:12px; color:var(--text2); line-height:1.7; }
   .drop-label .hint { display:block; margin-top:10px; font-size:11px; color:var(--text3); }
-
-  /* Empty state when no flows configured */
   .empty-flows { text-align:center; padding:48px 20px; border:0.5px solid var(--border); border-radius:var(--rl); margin-bottom:24px; }
   .empty-flows p { font-size:13px; color:var(--text2); margin-bottom:16px; line-height:1.7; }
-
   .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-bottom:24px; }
   .metric { background:var(--bg2); border-radius:var(--r); padding:14px 16px; }
   .metric .mlabel { font-size:11px; color:var(--text2); margin-bottom:5px; }
   .metric .mval { font-size:24px; font-weight:500; line-height:1; }
   .metric .msub { font-size:11px; color:var(--text3); margin-top:4px; }
-
   .stitle { font-size:11px; font-weight:500; color:var(--text2); text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; }
-
   .tbl-wrap { overflow-x:auto; margin-bottom:28px; }
   table.ft { width:100%; border-collapse:collapse; font-size:13px; }
   table.ft th { text-align:left; color:var(--text2); font-weight:500; padding:8px 12px; border-bottom:1px solid var(--border); white-space:nowrap; font-size:11px; text-transform:uppercase; letter-spacing:.04em; }
@@ -86,61 +74,50 @@
   .row-missing td:first-child { border-left:3px solid var(--red); }
   .row-low     td:first-child { border-left:3px solid var(--amber); }
   .row-nodata  td:first-child { border-left:3px solid var(--border2); }
-
   .badge { font-size:11px; padding:3px 9px; border-radius:100px; white-space:nowrap; display:inline-block; }
   .b-ok      { background:var(--green-bg); color:var(--green-text); }
   .b-missing { background:var(--red-bg);   color:var(--red-text);   }
   .b-low     { background:var(--amber-bg); color:var(--amber-text); }
   .b-nodata  { background:var(--bg2);      color:var(--text2);      }
-
   .sent-ok  { font-weight:500; color:var(--green-text); }
   .sent-bad { font-weight:500; color:var(--red-text); }
   .sent-low { font-weight:500; color:var(--amber-text); }
-
   canvas.spark { display:block; }
-
   .hist-section { margin-bottom:28px; }
   .tabs { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px; }
   .tab { padding:5px 12px; font-size:12px; border:0.5px solid var(--border); border-radius:100px; cursor:pointer; background:transparent; color:var(--text2); font-family:var(--font); }
   .tab:hover { border-color:var(--border2); color:var(--text); }
   .tab.active { background:var(--blue); color:#E6F1FB; border-color:var(--blue); }
   .chart-wrap { position:relative; width:100%; height:280px; margin-top:4px; }
-
-  /* Modal */
   .modal-ov { display:none; position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:200; align-items:flex-start; justify-content:center; padding:20px; overflow-y:auto; }
   .modal-ov.show { display:flex; }
   .modal { background:var(--bg); border:0.5px solid var(--border); border-radius:var(--rl); padding:24px; max-width:700px; width:100%; margin:auto; }
   .modal h2 { font-size:15px; font-weight:500; margin-bottom:6px; }
   .modal > p { font-size:13px; color:var(--text2); margin-bottom:16px; line-height:1.6; }
   .modal-foot { display:flex; gap:8px; justify-content:flex-end; margin-top:16px; padding-top:16px; border-top:0.5px solid var(--border); flex-wrap:wrap; }
-
-  /* Settings — flow list */
   .flows-list { margin-bottom:12px; }
-  .flow-row { display:grid; grid-template-columns:1fr 180px 70px 36px; gap:8px; align-items:center; padding:8px 0; border-bottom:0.5px solid var(--border); }
+  .flow-row { display:grid; grid-template-columns:1fr 160px 80px 36px; gap:8px; align-items:center; padding:8px 0; border-bottom:0.5px solid var(--border); }
   .flow-row:last-child { border-bottom:none; }
   .flow-row input[type=text]   { font-size:12px; padding:6px 8px; border:0.5px solid var(--border2); border-radius:var(--r); background:var(--bg); color:var(--text); font-family:var(--font); width:100%; }
   .flow-row input[type=number] { font-size:12px; padding:6px 8px; border:0.5px solid var(--border2); border-radius:var(--r); background:var(--bg); color:var(--text); font-family:var(--font); width:100%; }
-  .flow-row-headers { display:grid; grid-template-columns:1fr 180px 70px 36px; gap:8px; padding:0 0 6px; border-bottom:0.5px solid var(--border); margin-bottom:4px; }
+  .flow-row-headers { display:grid; grid-template-columns:1fr 160px 80px 36px; gap:8px; padding:0 0 6px; border-bottom:0.5px solid var(--border); margin-bottom:4px; }
   .flow-row-headers span { font-size:11px; color:var(--text2); font-weight:500; text-transform:uppercase; letter-spacing:.04em; }
   .del-btn { width:32px; height:32px; border:0.5px solid rgba(226,75,74,.35); border-radius:var(--r); background:transparent; color:var(--red-text); cursor:pointer; font-size:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
   .del-btn:hover { background:var(--red-bg); }
   .add-row { display:flex; gap:8px; margin-top:12px; padding-top:12px; border-top:0.5px solid var(--border); align-items:flex-end; flex-wrap:wrap; }
-  .add-row input[type=text]   { flex:1; min-width:200px; font-size:12px; padding:7px 10px; border:0.5px solid var(--border2); border-radius:var(--r); background:var(--bg); color:var(--text); font-family:var(--font); }
+  .add-row input[type=text]   { flex:1; min-width:180px; font-size:12px; padding:7px 10px; border:0.5px solid var(--border2); border-radius:var(--r); background:var(--bg); color:var(--text); font-family:var(--font); }
   .add-row input[type=number] { width:80px; font-size:12px; padding:7px 10px; border:0.5px solid var(--border2); border-radius:var(--r); background:var(--bg); color:var(--text); font-family:var(--font); }
   .add-row label { font-size:11px; color:var(--text2); display:block; margin-bottom:3px; }
   .add-row .field { display:flex; flex-direction:column; }
   .field-wide { flex:1; min-width:180px; }
-
-  /* Data modal */
   .dchips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
   .dchip { font-size:11px; background:var(--bg2); border:0.5px solid var(--border); border-radius:100px; padding:3px 10px; color:var(--text2); }
   .snote { font-size:11px; color:var(--text3); margin-top:10px; }
-
   @media (max-width:640px) {
     .topbar { flex-direction:column; align-items:flex-start; }
     .metrics { grid-template-columns:1fr 1fr; }
     canvas.spark { display:none; }
-    .flow-row { grid-template-columns:1fr 70px 28px; }
+    .flow-row { grid-template-columns:1fr 80px 28px; }
     .flow-row input[type=text]:nth-child(2) { display:none; }
     .flow-row-headers span:nth-child(2) { display:none; }
   }
@@ -152,7 +129,6 @@
 <input type="file" id="csvIn" accept=".csv" multiple>
 
 <div class="page">
-
   <div class="topbar">
     <div class="topbar-left">
       <h1>Sailthru LO flow monitor</h1>
@@ -173,7 +149,7 @@
       <strong>Drop your Sailthru triggered export CSV here</strong>
       <p>
         Export from Sailthru: <b>Analytics &rarr; Triggered &rarr; select date range &rarr; Export</b><br>
-        Matching is done on the <b>flow name</b> column (exact match). Flows not found in the export are flagged as missing.
+        Matching is on the <b>flow name</b> column (exact match). Flows not found are flagged as missing.
       </p>
       <span class="hint">Click here or use the Upload button above &mdash; upload multiple files to build history</span>
     </label>
@@ -205,15 +181,13 @@
     </div>
     <div class="hist-section" id="histSection"></div>
   </div>
-
 </div>
 
-<!-- Settings / Manage flows modal -->
+<!-- Manage flows modal -->
 <div class="modal-ov" id="settingsMdl">
   <div class="modal">
     <h2>Manage flows</h2>
-    <p>Add any Sailthru LO flow name exactly as it appears in the <b>flow name</b> column of your triggered export. Set a minimum send threshold — flows sending below it are flagged amber; flows absent from the export entirely are flagged red.</p>
-
+    <p>Add any Sailthru LO flow name exactly as it appears in the <b>flow name</b> column of your triggered export. Set a minimum send threshold — flows below it are flagged amber; flows absent entirely are flagged red.</p>
     <div class="flow-row-headers">
       <span>Flow name (exact Sailthru name)</span>
       <span>Label / campaign</span>
@@ -221,14 +195,13 @@
       <span></span>
     </div>
     <div class="flows-list" id="flowsList"></div>
-
     <div class="add-row" id="addRow">
       <div class="field field-wide">
         <label>Flow name (exact)</label>
         <input type="text" id="newFlowName" placeholder="e.g. MP-PostChurn-Survey-July2025-Deployment">
       </div>
-      <div class="field" style="min-width:160px;flex:1">
-        <label>Label / campaign (optional)</label>
+      <div class="field" style="min-width:140px;flex:1">
+        <label>Label (optional)</label>
         <input type="text" id="newFlowLabel" placeholder="e.g. Post Churn Survey">
       </div>
       <div class="field">
@@ -237,7 +210,6 @@
       </div>
       <button class="btn btn-primary btn-sm" onclick="addFlow()" style="align-self:flex-end">+ Add</button>
     </div>
-
     <div class="modal-foot">
       <button class="btn btn-danger" onclick="if(confirm('Remove all flows?')){cfgFlows=[];renderSettingsList();}">Clear all</button>
       <button class="btn" onclick="closeModal('settingsMdl')">Cancel</button>
@@ -262,42 +234,42 @@
 
 <script>
 /* =================================================================
-   STATE — everything lives in localStorage
+   DEFAULT FLOWS — thresholds set from weekly check sheet review
    ================================================================= */
-const SK = 'sailthru_lo_v8';
+const DEFAULT_FLOWS = [
+  { id:'f01', flow:'DailyMail+ Onboarding Global - Feb2026',                          label:'Mail+ Onboarding Global',             min:6000  },
+  { id:'f02', flow:'Mail+ Puzzles Onboarding Global (New Subs) - September 2025',     label:'Mail+ Puzzles Onboarding',            min:10000 },
+  { id:'f03', flow:'Mail_Essential_Welcome',                                            label:'Mail Essential Welcome',             min:20    },
+  { id:'f04', flow:'Mail+ Editions Onboarding Journey - Nov 2024 - Digital',           label:'Mail+ Editions Onboarding Digital',  min:350   },
+  { id:'f05', flow:'MP-PostChurn-Survey-July2025-Deployment',                          label:'Post Churn Survey',                  min:1000  },
+  { id:'f06', flow:'New Registrants Subscriber Offer Nov2025',                         label:'Google One Tap Subs Offer',          min:5000  },
+  { id:'f07', flow:'The Mail Onboarding - Nov 2024 - Print',                           label:'The Mail Onboarding Print',          min:500   },
+  { id:'f08', flow:'MPE-Price-rise-Annual-Renewal-August2025-AudienceEntry',           label:'Mail+ Editions Annual Renewal',      min:10    },
+  { id:'f09', flow:'MPE-Price-rise-27days-Monthly-Renewal-August2025-AudienceEntry',  label:'Mail+ Editions Monthly Renewal',     min:10    },
+  { id:'f10', flow:'MP-Personalised-Engagement-Email-July2025-Deployment',            label:'Personalised Engagement UK/ROW',     min:10    },
+  { id:'f11', flow:'MP-Personalised-Engagement-Email-US-September2025-Deployment',    label:'Personalised Engagement US',         min:1500  },
+  { id:'f12', flow:'MP-Personalised-Engagement-Email-AU-September2025-Deployment',    label:'Personalised Engagement AU',         min:500   },
+  { id:'f13', flow:'MP-Project-Now-January2026-Deployment',                            label:'Project Now UK',                     min:600   },
+  { id:'f14', flow:'MP-Project-Now-US-February2026-Deployment',                       label:'Project Now US',                     min:10    },
+];
+
+/* =================================================================
+   STORAGE
+   ================================================================= */
+const SK = 'sailthru_lo_v9';
 let lsOk = false;
 try { localStorage.setItem('_x','1'); localStorage.removeItem('_x'); lsOk = true; } catch(e) {}
 
-const DEFAULT_FLOWS = [
-  { id:'f01', flow:'DailyMail+ Onboarding Global - Feb2026',                           label:'Mail+ Onboarding Global',               min:10 },
-  { id:'f02', flow:'Mail+ Puzzles Onboarding Global (New Subs) - September 2025',      label:'Mail+ Puzzles Onboarding',              min:10 },
-  { id:'f03', flow:'Mail_Essential_Welcome',                                             label:'Mail Essential Welcome',               min:10 },
-  { id:'f04', flow:'Mail+ Editions Onboarding Journey - Nov 2024 - Digital',            label:'Mail+ Editions Onboarding Digital',     min:10 },
-  { id:'f05', flow:'MP-PostChurn-Survey-July2025-Deployment',                           label:'Post Churn Survey',                    min:10 },
-  { id:'f06', flow:'New Registrants Subscriber Offer Nov2025',                          label:'Google One Tap Subs Offer',             min:10 },
-  { id:'f07', flow:'The Mail Onboarding - Nov 2024 - Print',                            label:'The Mail Onboarding Print',             min:10 },
-  { id:'f08', flow:'MPE-Price-rise-Annual-Renewal-August2025-AudienceEntry',            label:'Mail+ Editions Annual Renewal',         min:10 },
-  { id:'f09', flow:'MPE-Price-rise-27days-Monthly-Renewal-August2025-AudienceEntry',   label:'Mail+ Editions Monthly Renewal',        min:10 },
-  { id:'f10', flow:'MP-Personalised-Engagement-Email-July2025-Deployment',             label:'Personalised Engagement UK/ROW',        min:10 },
-  { id:'f11', flow:'MP-Personalised-Engagement-Email-US-September2025-Deployment',     label:'Personalised Engagement US',            min:10 },
-  { id:'f12', flow:'MP-Personalised-Engagement-Email-AU-September2025-Deployment',     label:'Personalised Engagement AU',            min:10 },
-  { id:'f13', flow:'MP-Project-Now-January2026-Deployment',                             label:'Project Now UK',                        min:10 },
-  { id:'f14', flow:'MP-Project-Now-US-February2026-Deployment',                        label:'Project Now US',                        min:10 },
-];
-
-function mkDefault() {
-  return { history:{}, flows: JSON.parse(JSON.stringify(DEFAULT_FLOWS)) };
-}
+function mkDefault() { return { history:{}, flows:JSON.parse(JSON.stringify(DEFAULT_FLOWS)) }; }
 function loadS() {
-  if (lsOk) { try { const r = localStorage.getItem(SK); if (r) return JSON.parse(r); } catch(e) {} }
+  if (lsOk) { try { const r=localStorage.getItem(SK); if(r) return JSON.parse(r); } catch(e){} }
   return mkDefault();
 }
 function saveS() {
-  if (lsOk) { try { localStorage.setItem(SK, JSON.stringify(S)); } catch(e) { lsOk=false; } }
+  if (lsOk) { try { localStorage.setItem(SK,JSON.stringify(S)); } catch(e){ lsOk=false; } }
 }
 
 let S = loadS();
-// back-compat: migrate old format that stored flows separately
 if (!S.flows) S.flows = JSON.parse(JSON.stringify(DEFAULT_FLOWS));
 
 let chartInst = null;
@@ -307,155 +279,148 @@ let chartInst = null;
    ================================================================= */
 let toastT;
 function toast(msg, type) {
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.className = 'toast show toast-' + (type==='err' ? 'err' : 'ok');
+  const el=document.getElementById('toast');
+  el.textContent=msg;
+  el.className='toast show toast-'+(type==='err'?'err':'ok');
   clearTimeout(toastT);
-  toastT = setTimeout(() => el.classList.remove('show'), 4000);
+  toastT=setTimeout(()=>el.classList.remove('show'),4000);
 }
 
 /* =================================================================
    FILE INPUT
    ================================================================= */
 document.getElementById('csvIn').addEventListener('change', function() {
-  if (this.files && this.files.length > 0) { handleFiles(this.files); this.value=''; }
+  if (this.files&&this.files.length>0) { handleFiles(this.files); this.value=''; }
 });
 
 /* =================================================================
    CSV PARSING — Sailthru triggered export format
-   Rows: 7 metadata rows, then header row ("template id,..."), then data
-   Columns: 0=template id, 1=template name, 2=flow name, 3=labels, 4=link, 5=emails sent
-   Flow name is col 2; emails sent is col 5.
-   Multiple templates may share a flow name — we SUM emails sent.
-   Date range extracted from metadata row 1.
+   7 metadata rows → header row ("template id,...") → data rows
+   Col 2 = flow name, Col 5 = emails sent
+   Multiple templates per flow → SUM emails sent
+   Date range from metadata row containing "Date range of data:"
    ================================================================= */
 function parseTriggeredCSV(txt) {
-  const lines = txt.split(/\r?\n/);
-  let dateRange = null;
-  for (let i = 0; i < Math.min(10, lines.length); i++) {
-    const m = lines[i].match(/Date range of data:\s*(.+)/);
-    if (m) { dateRange = m[1].trim(); break; }
+  const lines=txt.split(/\r?\n/);
+  let dateRange=null;
+  for (let i=0;i<Math.min(10,lines.length);i++) {
+    const m=lines[i].match(/Date range of data:\s*(.+)/);
+    if(m){dateRange=m[1].trim();break;}
   }
-  let hdrIdx = -1;
-  for (let i = 0; i < lines.length; i++) {
-    if (lines[i].trim().toLowerCase().startsWith('template id')) { hdrIdx = i; break; }
+  let hdrIdx=-1;
+  for (let i=0;i<lines.length;i++) {
+    if(lines[i].trim().toLowerCase().startsWith('template id')){hdrIdx=i;break;}
   }
-  if (hdrIdx === -1 || !dateRange) return null;
+  if(hdrIdx===-1||!dateRange) return null;
 
-  const flowTotals = {};
-  for (let i = hdrIdx+1; i < lines.length; i++) {
-    const row = splitRow(lines[i]);
-    if (row.length < 6) continue;
-    const fn = row[2].trim();
-    if (!fn) continue;
-    const sent      = parseInt(row[5])  || 0;
-    const opens     = parseInt(row[6])  || 0;
-    const delivered = parseInt(row[10]) || 0;
-    if (!flowTotals[fn]) flowTotals[fn] = { sent:0, delivered:0, opens:0 };
-    flowTotals[fn].sent      += sent;
-    flowTotals[fn].delivered += delivered;
-    flowTotals[fn].opens     += opens;
+  const totals={};
+  for (let i=hdrIdx+1;i<lines.length;i++) {
+    const row=splitRow(lines[i]);
+    if(row.length<6) continue;
+    const fn=row[2].trim();
+    if(!fn) continue;
+    const sent=parseInt(row[5])||0;
+    const opens=parseInt(row[6])||0;
+    const delivered=parseInt(row[10])||0;
+    if(!totals[fn]) totals[fn]={sent:0,delivered:0,opens:0};
+    totals[fn].sent+=sent;
+    totals[fn].delivered+=delivered;
+    totals[fn].opens+=opens;
   }
-  return { dateRange, flowTotals };
+  return {dateRange,flowTotals:totals};
 }
 
 function splitRow(line) {
-  const cols=[]; let cur='', q=false;
-  for (let i=0; i<line.length; i++) {
+  const cols=[];let cur='',q=false;
+  for(let i=0;i<line.length;i++){
     const c=line[i];
-    if (c==='"') { q=!q; }
-    else if (c===',' && !q) { cols.push(cur); cur=''; }
+    if(c==='"'){q=!q;}
+    else if(c===','&&!q){cols.push(cur);cur='';}
     else cur+=c;
   }
-  cols.push(cur);
-  return cols;
+  cols.push(cur);return cols;
 }
 
 function handleFiles(files) {
-  let pending=files.length, loaded=0, errors=0;
-  Array.from(files).forEach(file => {
-    const reader = new FileReader();
-    reader.onerror = () => { errors++; if (--pending===0) done(); };
-    reader.onload = e => {
-      const result = parseTriggeredCSV(e.target.result);
-      if (!result) { errors++; }
-      else {
-        if (!S.history[result.dateRange]) S.history[result.dateRange] = {};
-        Object.assign(S.history[result.dateRange], result.flowTotals);
+  let pending=files.length,loaded=0,errors=0;
+  Array.from(files).forEach(file=>{
+    const reader=new FileReader();
+    reader.onerror=()=>{errors++;if(--pending===0)done();};
+    reader.onload=e=>{
+      const result=parseTriggeredCSV(e.target.result);
+      if(!result){errors++;}
+      else{
+        if(!S.history[result.dateRange]) S.history[result.dateRange]={};
+        Object.assign(S.history[result.dateRange],result.flowTotals);
         loaded++;
       }
-      if (--pending===0) done();
+      if(--pending===0)done();
     };
     reader.readAsText(file);
   });
-  function done() {
+  function done(){
     saveS();
-    if (loaded>0) { toast('Loaded '+loaded+' export file(s)', 'ok'); render(); }
-    else toast('Could not parse — is this a Sailthru triggered export CSV?', 'err');
+    if(loaded>0){toast('Loaded '+loaded+' export file(s)','ok');render();}
+    else toast('Could not parse — is this a Sailthru triggered export CSV?','err');
   }
 }
 
 /* drag-drop */
-const dz = document.getElementById('dropZone');
-dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag'); });
-dz.addEventListener('dragleave', () => dz.classList.remove('drag'));
-dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('drag'); if(e.dataTransfer.files.length) handleFiles(e.dataTransfer.files); });
+const dz=document.getElementById('dropZone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag');if(e.dataTransfer.files.length)handleFiles(e.dataTransfer.files);});
 
 /* =================================================================
    HELPERS
    ================================================================= */
-function allPeriods() { return Object.keys(S.history).sort(); }
-function latestPeriod() { const p=allPeriods(); return p.length ? p[p.length-1] : null; }
-function fmt(n) { return n==null ? '—' : (n||0).toLocaleString(); }
-function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-function uid() { return 'f' + Date.now() + Math.random().toString(36).slice(2,6); }
+function allPeriods(){return Object.keys(S.history).sort();}
+function latestPeriod(){const p=allPeriods();return p.length?p[p.length-1]:null;}
+function fmt(n){return n==null?'—':(n||0).toLocaleString();}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function uid(){return 'f'+Date.now()+Math.random().toString(36).slice(2,6);}
 
-function getSent(flowName, period) {
-  if (!S.history[period] || !flowName) return null;
-  const d = S.history[period][flowName];
-  return d != null ? d.sent : null;
+function getSent(flowName,period){
+  if(!S.history[period]||!flowName) return null;
+  const d=S.history[period][flowName];
+  return d!=null?d.sent:null;
 }
 
-function flowStatus(f, period) {
-  if (!period) return 'nodata';
-  const sent = getSent(f.flow, period);
-  if (sent===null) return 'missing';
-  if (sent < (f.min||10)) return 'low';
+function flowStatus(f,period){
+  if(!period) return 'nodata';
+  const sent=getSent(f.flow,period);
+  if(sent===null) return 'missing';
+  if(sent<(f.min||10)) return 'low';
   return 'ok';
 }
 
 /* =================================================================
    RENDER
    ================================================================= */
-function render() {
-  const lp = latestPeriod();
-  const hasFlows = S.flows.length > 0;
-  const hasData  = !!lp;
+function render(){
+  const lp=latestPeriod(),hasFlows=S.flows.length>0,hasData=!!lp;
+  document.getElementById('uploadWrap').style.display  = hasData?'none':'block';
+  document.getElementById('noFlowsMsg').style.display  = (!hasFlows&&hasData)?'block':'none';
+  document.getElementById('dash').style.display        = (hasFlows&&hasData)?'block':'none';
+  document.getElementById('dateBadge').textContent     = hasData?lp:'No data loaded';
+  if(!hasData||!hasFlows) return;
 
-  document.getElementById('uploadWrap').style.display  = hasData ? 'none' : 'block';
-  document.getElementById('noFlowsMsg').style.display  = (!hasFlows && hasData) ? 'block' : 'none';
-  document.getElementById('dash').style.display        = (hasFlows && hasData) ? 'block' : 'none';
-  document.getElementById('dateBadge').textContent     = hasData ? lp : 'No data loaded';
-
-  if (!hasData || !hasFlows) return;
-
-  const periods = allPeriods();
-
-  const results = S.flows.map(f => {
-    const sent   = getSent(f.flow, lp);
-    const status = flowStatus(f, lp);
-    const hist   = periods.map(p => getSent(f.flow, p)||0);
-    const nonZ   = hist.filter(v=>v>0);
-    const avg    = nonZ.length ? Math.round(nonZ.reduce((a,b)=>a+b,0)/nonZ.length) : 0;
-    return { ...f, sent, status, hist, avg };
+  const periods=allPeriods();
+  const results=S.flows.map(f=>{
+    const sent=getSent(f.flow,lp);
+    const status=flowStatus(f,lp);
+    const hist=periods.map(p=>getSent(f.flow,p)||0);
+    const nonZ=hist.filter(v=>v>0);
+    const avg=nonZ.length?Math.round(nonZ.reduce((a,b)=>a+b,0)/nonZ.length):0;
+    return{...f,sent,status,hist,avg};
   });
 
-  const missing = results.filter(r=>r.status==='missing');
-  const low     = results.filter(r=>r.status==='low');
-  const ok      = results.filter(r=>r.status==='ok');
-  const total   = results.reduce((s,r)=>s+(r.sent||0),0);
+  const missing=results.filter(r=>r.status==='missing');
+  const low=results.filter(r=>r.status==='low');
+  const ok=results.filter(r=>r.status==='ok');
+  const total=results.reduce((s,r)=>s+(r.sent||0),0);
 
-  document.getElementById('metricsRow').innerHTML = `
+  document.getElementById('metricsRow').innerHTML=`
     <div class="metric"><div class="mlabel">Export period</div><div class="mval" style="font-size:15px;line-height:1.3">${esc(lp)}</div><div class="msub">${periods.length} period(s) loaded</div></div>
     <div class="metric"><div class="mlabel">Flows OK</div><div class="mval" style="color:var(--green-text)">${ok.length}</div><div class="msub">of ${S.flows.length} monitored</div></div>
     <div class="metric"><div class="mlabel">Missing from export</div><div class="mval" style="color:${missing.length>0?'var(--red-text)':'var(--green-text)'}">${missing.length}</div><div class="msub">${missing.length>0?'not in file':'all present'}</div></div>
@@ -463,55 +428,55 @@ function render() {
     <div class="metric"><div class="mlabel">Total sent</div><div class="mval">${fmt(total)}</div><div class="msub">monitored flows</div></div>
   `;
 
-  const lines = [];
-  missing.forEach(r => lines.push(`<b>${esc(r.label||r.flow)}</b>: "${esc(r.flow)}" — not found in this export`));
-  low.forEach(r     => lines.push(`<b>${esc(r.label||r.flow)}</b>: "${esc(r.flow)}" — ${fmt(r.sent)} sent (min: ${r.min||10})`));
-  const banner = document.getElementById('alertBanner');
-  if (lines.length) { banner.innerHTML=`<b>&#9888; Issues for ${esc(lp)}</b><br>${lines.join('<br>')}`; banner.classList.add('show'); }
+  const lines=[];
+  missing.forEach(r=>lines.push(`<b>${esc(r.label||r.flow)}</b>: "${esc(r.flow)}" — not found in this export`));
+  low.forEach(r=>lines.push(`<b>${esc(r.label||r.flow)}</b>: "${esc(r.flow)}" — ${fmt(r.sent)} sent (min: ${r.min||10})`));
+  const banner=document.getElementById('alertBanner');
+  if(lines.length){banner.innerHTML=`<b>&#9888; Issues for ${esc(lp)}</b><br>${lines.join('<br>')}`;banner.classList.add('show');}
   else banner.classList.remove('show');
 
-  document.getElementById('tblTitle').textContent = 'Monitored flows — ' + lp;
+  document.getElementById('tblTitle').textContent='Monitored flows — '+lp;
 
-  const sorted = [...results].sort((a,b) => {
+  const sorted=[...results].sort((a,b)=>{
     const r={missing:0,low:1,ok:2,nodata:3};
     return r[a.status]-r[b.status];
   });
 
-  const tbody = document.getElementById('flowsTbody');
-  tbody.innerHTML = '';
-  sorted.forEach(r => {
-    const tr = document.createElement('tr');
+  const tbody=document.getElementById('flowsTbody');
+  tbody.innerHTML='';
+  sorted.forEach(r=>{
+    const tr=document.createElement('tr');
     let bClass,bText,sClass;
-    if      (r.status==='ok')      { bClass='b-ok';      bText='OK';              sClass='sent-ok';  }
-    else if (r.status==='missing') { bClass='b-missing'; bText='Not in export';   sClass='sent-bad'; }
-    else if (r.status==='low')     { bClass='b-low';     bText='Below threshold'; sClass='sent-low'; }
-    else                            { bClass='b-nodata';  bText='No data';         sClass='';         }
-    tr.className = 'row-' + r.status;
-    tr.innerHTML = `
+    if     (r.status==='ok')     {bClass='b-ok';     bText='OK';             sClass='sent-ok'; }
+    else if(r.status==='missing'){bClass='b-missing';bText='Not in export';  sClass='sent-bad';}
+    else if(r.status==='low')    {bClass='b-low';    bText='Below threshold';sClass='sent-low';}
+    else                          {bClass='b-nodata'; bText='No data';        sClass='';}
+    tr.className='row-'+r.status;
+    tr.innerHTML=`
       <td><div style="font-size:12px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:360px" title="${esc(r.flow)}">${esc(r.flow)}</div></td>
       <td><div style="font-size:11px;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(r.label||'')}">${esc(r.label||'—')}</div></td>
       <td><span class="badge ${bClass}">${bText}</span></td>
       <td><span class="${sClass}">${r.sent===null?'—':fmt(r.sent)}</span></td>
-      <td><span style="font-size:12px;color:var(--text2)">${r.min||10}</span></td>
+      <td><span style="font-size:12px;color:var(--text2)">${fmt(r.min||10)}</span></td>
       <td><canvas class="spark" id="sp_${r.id}" width="100" height="30"></canvas></td>
       <td><span style="font-size:12px;color:var(--text2)">${r.avg>0?fmt(r.avg):'—'}</span></td>
     `;
     tbody.appendChild(tr);
-    setTimeout(() => drawSpark(r.id, r.hist, r.status), 0);
+    setTimeout(()=>drawSpark(r.id,r.hist,r.status),0);
   });
 
-  renderHistory(periods, results);
+  renderHistory(periods,results);
 }
 
 /* sparklines */
-function drawSpark(id, data, status) {
+function drawSpark(id,data,status){
   const canvas=document.getElementById('sp_'+id);
-  if (!canvas||data.length<2) return;
+  if(!canvas||data.length<2) return;
   const ctx=canvas.getContext('2d');
   const w=100,h=30,pad=3,max=Math.max(...data,1);
   const col=status==='ok'?'#1D9E75':status==='missing'?'#E24B4A':'#BA7517';
   ctx.clearRect(0,0,w,h);
-  ctx.strokeStyle=col; ctx.lineWidth=1.5;
+  ctx.strokeStyle=col;ctx.lineWidth=1.5;
   ctx.beginPath();
   data.forEach((v,i)=>{
     const x=pad+(i/(data.length-1))*(w-pad*2);
@@ -523,34 +488,34 @@ function drawSpark(id, data, status) {
   data.forEach((v,i)=>{
     const x=pad+(i/(data.length-1))*(w-pad*2);
     const y=h-pad-(v/max)*(h-pad*2);
-    ctx.beginPath(); ctx.arc(x,y,2,0,Math.PI*2); ctx.fill();
+    ctx.beginPath();ctx.arc(x,y,2,0,Math.PI*2);ctx.fill();
   });
 }
 
 /* history chart */
-function renderHistory(periods, results) {
+function renderHistory(periods,results){
   const hs=document.getElementById('histSection');
-  if (periods.length<2) { hs.innerHTML=''; return; }
+  if(periods.length<2){hs.innerHTML='';return;}
   hs.innerHTML=`
     <div class="stitle">Volume history by flow</div>
     <div class="tabs" id="histTabs"></div>
     <div class="chart-wrap"><canvas id="histChart" role="img" aria-label="Email send volumes over time">Chart</canvas></div>
   `;
-  let activeId = S.flows[0]?.id;
-  function buildTabs() {
-    const el=document.getElementById('histTabs'); if(!el) return;
-    el.innerHTML=S.flows.map(f=>`<button class="tab ${f.id===activeId?'active':''}" onclick="switchTab('${f.id}')">${esc(f.label||f.flow.substring(0,30))}</button>`).join('');
-    drawHistChart(activeId, periods, results);
+  let activeId=S.flows[0]?.id;
+  function buildTabs(){
+    const el=document.getElementById('histTabs');if(!el)return;
+    el.innerHTML=S.flows.map(f=>`<button class="tab ${f.id===activeId?'active':''}" onclick="switchTab('${f.id}')">${esc(f.label||f.flow.substring(0,28))}</button>`).join('');
+    drawHistChart(activeId,periods,results);
   }
   window.switchTab=id=>{activeId=id;buildTabs();};
   buildTabs();
 }
 
-function drawHistChart(flowId, periods, results) {
-  if (chartInst) { chartInst.destroy(); chartInst=null; }
+function drawHistChart(flowId,periods,results){
+  if(chartInst){chartInst.destroy();chartInst=null;}
   const flow=S.flows.find(f=>f.id===flowId);
   const ctx=document.getElementById('histChart');
-  if (!flow||!ctx) return;
+  if(!flow||!ctx) return;
   const r=results.find(r=>r.id===flowId);
   const data=r?r.hist:periods.map(p=>getSent(flow.flow,p)||0);
   const thr=flow.min||10;
@@ -562,17 +527,17 @@ function drawHistChart(flowId, periods, results) {
     data:{
       labels:periods,
       datasets:[
-        { label:'Emails sent', data,
-          backgroundColor:data.map(v=>v===0?'rgba(226,75,74,.45)':v<thr?'rgba(186,117,23,.5)':'rgba(29,158,117,.55)'),
-          borderColor:data.map(v=>v===0?'#E24B4A':v<thr?'#BA7517':'#1D9E75'),
-          borderWidth:1 },
-        { label:'Min threshold', data:periods.map(()=>thr), type:'line',
-          borderColor:'rgba(186,117,23,.7)', borderDash:[4,3], borderWidth:1.5,
-          pointRadius:0, fill:false }
+        {label:'Emails sent',data,
+         backgroundColor:data.map(v=>v===0?'rgba(226,75,74,.45)':v<thr?'rgba(186,117,23,.5)':'rgba(29,158,117,.55)'),
+         borderColor:data.map(v=>v===0?'#E24B4A':v<thr?'#BA7517':'#1D9E75'),
+         borderWidth:1},
+        {label:'Min threshold',data:periods.map(()=>thr),type:'line',
+         borderColor:'rgba(186,117,23,.7)',borderDash:[4,3],borderWidth:1.5,
+         pointRadius:0,fill:false}
       ]
     },
     options:{
-      responsive:true, maintainAspectRatio:false,
+      responsive:true,maintainAspectRatio:false,
       plugins:{
         legend:{display:true,position:'top',labels:{font:{size:11},boxWidth:10,color:tc}},
         tooltip:{mode:'index',intersect:false}
@@ -586,100 +551,86 @@ function drawHistChart(flowId, periods, results) {
 }
 
 /* =================================================================
-   SETTINGS / MANAGE FLOWS MODAL
+   MANAGE FLOWS MODAL
    ================================================================= */
-let cfgFlows = [];
+let cfgFlows=[];
 
-function openSettings() {
-  cfgFlows = JSON.parse(JSON.stringify(S.flows));
+function openSettings(){
+  cfgFlows=JSON.parse(JSON.stringify(S.flows));
   renderSettingsList();
-  document.getElementById('newFlowName').value  = '';
-  document.getElementById('newFlowLabel').value = '';
-  document.getElementById('newFlowMin').value   = '10';
+  document.getElementById('newFlowName').value='';
+  document.getElementById('newFlowLabel').value='';
+  document.getElementById('newFlowMin').value='10';
   document.getElementById('settingsMdl').classList.add('show');
 }
 
-function renderSettingsList() {
-  const list = document.getElementById('flowsList');
-  if (cfgFlows.length === 0) {
-    list.innerHTML = '<p style="font-size:13px;color:var(--text2);padding:12px 0">No flows configured. Add one below.</p>';
+function renderSettingsList(){
+  const list=document.getElementById('flowsList');
+  if(cfgFlows.length===0){
+    list.innerHTML='<p style="font-size:13px;color:var(--text2);padding:12px 0">No flows configured. Add one below.</p>';
     return;
   }
-  list.innerHTML = cfgFlows.map((f,i) => `
+  list.innerHTML=cfgFlows.map((f,i)=>`
     <div class="flow-row" id="frow_${i}">
-      <input type="text"   value="${esc(f.flow)}"  placeholder="Sailthru flow name (exact)"  data-i="${i}" data-k="flow"  oninput="updateCfg(this)">
-      <input type="text"   value="${esc(f.label||'')}" placeholder="Label (optional)"         data-i="${i}" data-k="label" oninput="updateCfg(this)">
-      <input type="number" value="${f.min||10}" min="1"                                        data-i="${i}" data-k="min"   oninput="updateCfg(this)">
-      <button class="del-btn" onclick="deleteFlow(${i})" title="Remove this flow">&#215;</button>
+      <input type="text"   value="${esc(f.flow)}"       placeholder="Sailthru flow name (exact)" data-i="${i}" data-k="flow"  oninput="updateCfg(this)">
+      <input type="text"   value="${esc(f.label||'')}"  placeholder="Label (optional)"           data-i="${i}" data-k="label" oninput="updateCfg(this)">
+      <input type="number" value="${f.min||10}" min="1"                                           data-i="${i}" data-k="min"   oninput="updateCfg(this)">
+      <button class="del-btn" onclick="deleteFlow(${i})" title="Remove">&#215;</button>
     </div>
   `).join('');
 }
 
-window.updateCfg = function(inp) {
-  const i=parseInt(inp.dataset.i), k=inp.dataset.k;
-  cfgFlows[i][k] = k==='min' ? (parseInt(inp.value)||1) : inp.value;
+window.updateCfg=function(inp){
+  const i=parseInt(inp.dataset.i),k=inp.dataset.k;
+  cfgFlows[i][k]=k==='min'?(parseInt(inp.value)||1):inp.value;
 };
-
-window.deleteFlow = function(i) {
-  cfgFlows.splice(i,1);
+window.deleteFlow=function(i){cfgFlows.splice(i,1);renderSettingsList();};
+window.addFlow=function(){
+  const name=document.getElementById('newFlowName').value.trim();
+  const label=document.getElementById('newFlowLabel').value.trim();
+  const min=parseInt(document.getElementById('newFlowMin').value)||10;
+  if(!name){document.getElementById('newFlowName').focus();return;}
+  cfgFlows.push({id:uid(),flow:name,label,min});
   renderSettingsList();
-};
-
-window.addFlow = function() {
-  const name  = document.getElementById('newFlowName').value.trim();
-  const label = document.getElementById('newFlowLabel').value.trim();
-  const min   = parseInt(document.getElementById('newFlowMin').value) || 10;
-  if (!name) { document.getElementById('newFlowName').focus(); return; }
-  cfgFlows.push({ id:uid(), flow:name, label, min });
-  renderSettingsList();
-  document.getElementById('newFlowName').value  = '';
-  document.getElementById('newFlowLabel').value = '';
-  document.getElementById('newFlowMin').value   = '10';
+  document.getElementById('newFlowName').value='';
+  document.getElementById('newFlowLabel').value='';
+  document.getElementById('newFlowMin').value='10';
   document.getElementById('newFlowName').focus();
 };
 
-/* allow Enter key in the add row to trigger add */
-document.getElementById('newFlowName').addEventListener('keydown',  e=>{ if(e.key==='Enter') addFlow(); });
-document.getElementById('newFlowLabel').addEventListener('keydown', e=>{ if(e.key==='Enter') addFlow(); });
-document.getElementById('newFlowMin').addEventListener('keydown',   e=>{ if(e.key==='Enter') addFlow(); });
+['newFlowName','newFlowLabel','newFlowMin'].forEach(id=>{
+  document.getElementById(id).addEventListener('keydown',e=>{if(e.key==='Enter')addFlow();});
+});
 
-function saveSettings() {
-  S.flows = cfgFlows;
-  saveS();
-  closeModal('settingsMdl');
-  render();
-  toast('Flows saved (' + S.flows.length + ' monitored)', 'ok');
+function saveSettings(){
+  S.flows=cfgFlows;saveS();closeModal('settingsMdl');render();
+  toast('Flows saved ('+S.flows.length+' monitored)','ok');
 }
 
 /* =================================================================
    DATA MODAL
    ================================================================= */
-function openData() {
-  const periods=allPeriods(), total=Object.values(S.history).reduce((s,d)=>s+Object.keys(d).length,0);
-  document.getElementById('dataContent').innerHTML = periods.length===0
-    ? '<p style="font-size:13px;color:var(--text2)">No data loaded yet.</p>'
-    : `<p style="font-size:13px;color:var(--text2);margin-bottom:10px">${periods.length} period(s) &middot; ${total.toLocaleString()} flow records</p>
-       <div class="dchips">${periods.map(p=>`<span class="dchip">${esc(p)}</span>`).join('')}</div>`;
-  document.getElementById('snote').textContent = lsOk
-    ? 'Data and flow config persist in this browser between sessions.'
-    : 'Note: browser storage unavailable — data resets on refresh.';
+function openData(){
+  const periods=allPeriods(),total=Object.values(S.history).reduce((s,d)=>s+Object.keys(d).length,0);
+  document.getElementById('dataContent').innerHTML=periods.length===0
+    ?'<p style="font-size:13px;color:var(--text2)">No data loaded yet.</p>'
+    :`<p style="font-size:13px;color:var(--text2);margin-bottom:10px">${periods.length} period(s) &middot; ${total.toLocaleString()} flow records</p>
+      <div class="dchips">${periods.map(p=>`<span class="dchip">${esc(p)}</span>`).join('')}</div>`;
+  document.getElementById('snote').textContent=lsOk
+    ?'Data and flow config persist in this browser between sessions.'
+    :'Note: browser storage unavailable — data resets on refresh.';
   document.getElementById('dataMdl').classList.add('show');
 }
-
-function clearData() {
-  if (!confirm('Clear all loaded data? Flow configuration will be kept.')) return;
-  S.history={}; saveS(); closeModal('dataMdl'); render(); toast('Data cleared','ok');
+function clearData(){
+  if(!confirm('Clear all loaded data? Flow configuration will be kept.')) return;
+  S.history={};saveS();closeModal('dataMdl');render();toast('Data cleared','ok');
 }
 
-/* =================================================================
-   UTILS
-   ================================================================= */
-function closeModal(id) { document.getElementById(id).classList.remove('show'); }
-document.querySelectorAll('.modal-ov').forEach(el =>
-  el.addEventListener('click', e=>{ if(e.target===el) el.classList.remove('show'); })
+function closeModal(id){document.getElementById(id).classList.remove('show');}
+document.querySelectorAll('.modal-ov').forEach(el=>
+  el.addEventListener('click',e=>{if(e.target===el)el.classList.remove('show');})
 );
 
-/* init */
 render();
 </script>
 </body>
